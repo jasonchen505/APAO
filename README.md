@@ -1,7 +1,11 @@
 # APAO: Adaptive Prefix-Aware Optimization for Generative Recommendation
 
-This repository provides the official implementation of **Adaptive Prefix-Aware Optimization (APAO)**, a training-side framework for generative sequential recommendation under beam-search
-decoding. APAO addresses the training-inference inconsistency caused by teacher-forcing training and pruning-based beam-search inference by introducing prefix-level optimization objectives that
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20439389.svg)](https://doi.org/10.5281/zenodo.20439389)
+
+This repository provides the official implementation for our KDD'26 paper, **Adaptive Prefix-Aware Optimization (APAO)**, a training-side framework for generative sequential recommendation under beam-search
+decoding.
+
+APAO addresses the training-inference inconsistency caused by teacher-forcing training and pruning-based beam-search inference by introducing prefix-level optimization objectives that
 better align model training with the progressive pruning behavior of beam search.
 
 The codebase includes implementations of APAO-Pointwise and APAO-Pairwise, representative T5-based encoder-decoder and Llama-based decoder-only backbones, processed benchmark datasets, tokenizer
@@ -95,3 +99,19 @@ bash scripts/run_msl.sh
 ```
 
 The baseline scripts follow the same structure: the first block can be used for hyperparameter tuning, and the reproduction block lists the optimal settings for the reported results.
+
+## Citation
+
+The archived KDD26 release of this repository is available on Zenodo:
+```bibtex
+@software{yuanqing_yu_2026_20439389,
+  author       = {Yuanqing Yu},
+  title        = {yuyq18/APAO: KDD26},
+  month        = may,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {KDD26},
+  doi          = {10.5281/zenodo.20439389},
+  url          = {https://doi.org/10.5281/zenodo.20439389}
+}
+```
